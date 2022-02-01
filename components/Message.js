@@ -10,10 +10,12 @@ function Message({ user, message }) {
 
   return (
     <Container>
-      <TypeMessage>{message.message}</TypeMessage>
-      <Timestamp>
-        {message.timestamp ? moment(message.timestamp).format("LT") : "..."}
-      </Timestamp>
+      <TypeMessage>
+        {message.message}
+        <Timestamp>
+          {message.timestamp ? moment(message.timestamp).format("LT") : "..."}
+        </Timestamp>
+      </TypeMessage>
     </Container>
   );
 }
